@@ -2,8 +2,22 @@ var express = require('express');
 var router = express.Router();
 var log4js = require('log4js');
 log4js.configure({
-  appenders: { Maxy: { type: 'file', filename: 'Maxy.log' } },
-  categories: { default: { appenders: ['Maxy'], level: 'info' } }
+  appenders: { 
+  	Maxy: { 
+  		type: 'file',
+  		filename: 'Maxy.log',
+  		layout: {
+            "type": "pattern",
+            "pattern": "[%d{yyyy-MM-dd hh:mm:ss}]Maxy:%m"
+        }
+  	} 
+  },
+  categories: { 
+  	default: { 
+  		appenders: ['Maxy'], 
+  		level: 'info' 
+  	} 
+  }
 });
 var logger = log4js.getLogger('Maxy');
 

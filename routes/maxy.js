@@ -8,7 +8,7 @@ log4js.configure({
   		filename: 'Maxy.log',
   		layout: {
             "type": "pattern",
-            "pattern": "[%d{yyyy-MM-dd hh:mm:ss}]Maxy:%m"
+            "pattern": "[%d{yyyy-MM-dd hh:mm:ss}] Maxy:%m"
         }
   	} 
   },
